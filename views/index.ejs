@@ -1,0 +1,34 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+    <br>
+    <form class="new-students-form" action="">
+        <button class="add-student-btn">Add New Student</button>
+    </form>
+    <br>
+    <table class="student-table" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Intake</th>
+                <th>Class ID</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let student of allStudents) { %>
+                <tr>
+                    <td><%= student.studentName %></td>
+                    <td><%= student.studentDept %></td>
+                    <td><%= student.studentIntake %></td>
+                    <td><%= student.studentClassId %></td>
+                    <td>
+                        <form action="">
+                            <button class="details-btn">Show Details</button>
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>

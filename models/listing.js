@@ -8,8 +8,12 @@ const studentSchema = new Schema({
   studentImage: {
     type: String,
     required: true,
-    default: "https://media.licdn.com/dms/image/v2/D5603AQFO0bzX0uJPDg/profile-displayphoto-scale_400_400/B56Z27HMKZJgAk-/0/1776960720562?e=1785369600&v=beta&t=YXp2YrpjexuutVgzWuur6p_6XUl6wuvXsxCq3aX5Fh4",
-    set: (v) => v === "" ? "https://media.licdn.com/dms/image/v2/D5603AQFO0bzX0uJPDg/profile-displayphoto-scale_400_400/B56Z27HMKZJgAk-/0/1776960720562?e=1785369600&v=beta&t=YXp2YrpjexuutVgzWuur6p_6XUl6wuvXsxCq3aX5Fh4" : v,
+    default:
+      "https://media.licdn.com/dms/image/v2/D5603AQFO0bzX0uJPDg/profile-displayphoto-scale_400_400/B56Z27HMKZJgAk-/0/1776960720562?e=1785369600&v=beta&t=YXp2YrpjexuutVgzWuur6p_6XUl6wuvXsxCq3aX5Fh4",
+    set: (v) =>
+      v === ""
+        ? "https://media.licdn.com/dms/image/v2/D5603AQFO0bzX0uJPDg/profile-displayphoto-scale_400_400/B56Z27HMKZJgAk-/0/1776960720562?e=1785369600&v=beta&t=YXp2YrpjexuutVgzWuur6p_6XUl6wuvXsxCq3aX5Fh4"
+        : v,
   },
   studentAge: {
     type: Number,
@@ -36,6 +40,18 @@ const studentSchema = new Schema({
     required: true,
   },
   studentMailingAddress: {
+    type: String,
+    required: true,
+  },
+  studentDept: {
+    type: String,
+    required: true,
+  },
+  studentIntake: {
+    type: Number,
+    required: true,
+  },
+  studentClassId: {
     type: String,
     required: true,
   },

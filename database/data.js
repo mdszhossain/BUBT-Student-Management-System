@@ -10,6 +10,9 @@ const sampleStudents = [
     studentGuardianContact: "01816898357",
     studentMailingAddress:
       "House: 37, Lane: 5, Block: A, Section: 6, Mirpur, Dhaka: 1216",
+    studentDept: "CSE",
+    studentIntake: 50,
+    studentClassId: "22234103110",
   },
   {
     studentName: "Mst Farzana Akter",
@@ -22,6 +25,9 @@ const sampleStudents = [
     studentGuardianContact: "01923456789",
     studentMailingAddress:
       "House: 12, Road: 3, Block: C, Bashundhara R/A, Dhaka: 1229",
+    studentDept: "EEE",
+    studentIntake: 51,
+    studentClassId: "22234103111",
   },
   {
     studentName: "Md Rakibul Hasan",
@@ -32,7 +38,11 @@ const sampleStudents = [
     studentEmail: "rakibul.hasan23@gmail.com",
     studentContact: "01811223344",
     studentGuardianContact: "01911223344",
-    studentMailingAddress: "House: 5, Lane: 2, Sector: 10, Uttara, Dhaka: 1230",
+    studentMailingAddress:
+      "House: 5, Lane: 2, Sector: 10, Uttara, Dhaka: 1230",
+    studentDept: "BBA",
+    studentIntake: 49,
+    studentClassId: "22234103112",
   },
   {
     studentName: "Tasnim Jahan",
@@ -43,7 +53,11 @@ const sampleStudents = [
     studentEmail: "tasnim.jahan21@gmail.com",
     studentContact: "01755667788",
     studentGuardianContact: "01655667788",
-    studentMailingAddress: "House: 21, Road: 7, Dhanmondi, Dhaka: 1209",
+    studentMailingAddress:
+      "House: 21, Road: 7, Dhanmondi, Dhaka: 1209",
+    studentDept: "CSE",
+    studentIntake: 52,
+    studentClassId: "22234103113",
   },
   {
     studentName: "Md Imran Khan",
@@ -54,7 +68,11 @@ const sampleStudents = [
     studentEmail: "imran.khan25@gmail.com",
     studentContact: "01677889900",
     studentGuardianContact: "01877889900",
-    studentMailingAddress: "House: 9, Block: D, Banasree, Rampura, Dhaka: 1219",
+    studentMailingAddress:
+      "House: 9, Block: D, Banasree, Rampura, Dhaka: 1219",
+    studentDept: "CE",
+    studentIntake: 48,
+    studentClassId: "22234103114",
   },
   {
     studentName: "Sumaiya Islam",
@@ -65,7 +83,11 @@ const sampleStudents = [
     studentEmail: "sumaiya.islam20@gmail.com",
     studentContact: "01911002233",
     studentGuardianContact: "01711002233",
-    studentMailingAddress: "House: 44, Lane: 1, Mohammadpur, Dhaka: 1207",
+    studentMailingAddress:
+      "House: 44, Lane: 1, Mohammadpur, Dhaka: 1207",
+    studentDept: "EEE",
+    studentIntake: 50,
+    studentClassId: "22234103115",
   },
   {
     studentName: "Md Tanvir Ahmed",
@@ -78,6 +100,9 @@ const sampleStudents = [
     studentGuardianContact: "01622334455",
     studentMailingAddress:
       "House: 63, Road: 11, Sector: 6, Uttara, Dhaka: 1230",
+    studentDept: "CSE",
+    studentIntake: 51,
+    studentClassId: "22234103116",
   },
   {
     studentName: "Nusrat Jahan Mim",
@@ -90,6 +115,9 @@ const sampleStudents = [
     studentGuardianContact: "01533445566",
     studentMailingAddress:
       "House: 8, Block: B, Section: 2, Mirpur, Dhaka: 1216",
+    studentDept: "BBA",
+    studentIntake: 49,
+    studentClassId: "22234103117",
   },
   {
     studentName: "Md Sabbir Rahman",
@@ -100,7 +128,11 @@ const sampleStudents = [
     studentEmail: "sabbir.rahman23@gmail.com",
     studentContact: "01944556677",
     studentGuardianContact: "01744556677",
-    studentMailingAddress: "House: 17, Lane: 4, Khilgaon, Dhaka: 1219",
+    studentMailingAddress:
+      "House: 17, Lane: 4, Khilgaon, Dhaka: 1219",
+    studentDept: "CE",
+    studentIntake: 52,
+    studentClassId: "22234103118",
   },
   {
     studentName: "Afsana Mimi",
@@ -111,7 +143,11 @@ const sampleStudents = [
     studentEmail: "afsana.mimi21@gmail.com",
     studentContact: "01655778899",
     studentGuardianContact: "01855778899",
-    studentMailingAddress: "House: 29, Road: 9, Banani, Dhaka: 1213",
+    studentMailingAddress:
+      "House: 29, Road: 9, Banani, Dhaka: 1213",
+    studentDept: "EEE",
+    studentIntake: 50,
+    studentClassId: "22234103119",
   },
   {
     studentName: "Md Al Amin",
@@ -124,6 +160,9 @@ const sampleStudents = [
     studentGuardianContact: "01966223344",
     studentMailingAddress:
       "House: 14, Block: F, Section: 11, Pallabi, Dhaka: 1216",
+    studentDept: "CSE",
+    studentIntake: 48,
+    studentClassId: "22234103120",
   },
   {
     studentName: "Jannatul Ferdous",
@@ -134,7 +173,11 @@ const sampleStudents = [
     studentEmail: "jannatul.ferdous20@gmail.com",
     studentContact: "01899001122",
     studentGuardianContact: "01699001122",
-    studentMailingAddress: "House: 3, Lane: 6, Wari, Dhaka: 1203",
+    studentMailingAddress:
+      "House: 3, Lane: 6, Wari, Dhaka: 1203",
+    studentDept: "BBA",
+    studentIntake: 51,
+    studentClassId: "22234103121",
   },
   {
     studentName: "Md Nayeem Hossain",
@@ -145,7 +188,11 @@ const sampleStudents = [
     studentEmail: "nayeem.hossain24@gmail.com",
     studentContact: "01711998877",
     studentGuardianContact: "01911998877",
-    studentMailingAddress: "House: 51, Road: 2, Shyamoli, Dhaka: 1207",
+    studentMailingAddress:
+      "House: 51, Road: 2, Shyamoli, Dhaka: 1207",
+    studentDept: "CE",
+    studentIntake: 49,
+    studentClassId: "22234103122",
   },
   {
     studentName: "Rummana Akter",
@@ -158,6 +205,9 @@ const sampleStudents = [
     studentGuardianContact: "01833445588",
     studentMailingAddress:
       "House: 18, Block: A, Section: 12, Pallabi, Dhaka: 1216",
+    studentDept: "EEE",
+    studentIntake: 52,
+    studentClassId: "22234103123",
   },
   {
     studentName: "Md Ashraful Islam",
@@ -168,7 +218,11 @@ const sampleStudents = [
     studentEmail: "ashraful.islam23@gmail.com",
     studentContact: "01755112233",
     studentGuardianContact: "01555112233",
-    studentMailingAddress: "House: 26, Lane: 3, Jatrabari, Dhaka: 1204",
+    studentMailingAddress:
+      "House: 26, Lane: 3, Jatrabari, Dhaka: 1204",
+    studentDept: "CSE",
+    studentIntake: 50,
+    studentClassId: "22234103124",
   },
   {
     studentName: "Sadia Sultana",
@@ -179,7 +233,11 @@ const sampleStudents = [
     studentEmail: "sadia.sultana21@gmail.com",
     studentContact: "01877665544",
     studentGuardianContact: "01677665544",
-    studentMailingAddress: "House: 33, Road: 5, Lalmatia, Dhaka: 1207",
+    studentMailingAddress:
+      "House: 33, Road: 5, Lalmatia, Dhaka: 1207",
+    studentDept: "BBA",
+    studentIntake: 48,
+    studentClassId: "22234103125",
   },
   {
     studentName: "Md Rezaul Karim",
@@ -192,6 +250,9 @@ const sampleStudents = [
     studentGuardianContact: "01722334477",
     studentMailingAddress:
       "House: 40, Block: E, Section: 7, Mirpur, Dhaka: 1216",
+    studentDept: "CE",
+    studentIntake: 51,
+    studentClassId: "22234103126",
   },
   {
     studentName: "Fahmida Yeasmin",
@@ -202,7 +263,11 @@ const sampleStudents = [
     studentEmail: "fahmida.yeasmin20@gmail.com",
     studentContact: "01644556699",
     studentGuardianContact: "01844556699",
-    studentMailingAddress: "House: 7, Lane: 8, Badda, Dhaka: 1212",
+    studentMailingAddress:
+      "House: 7, Lane: 8, Badda, Dhaka: 1212",
+    studentDept: "CSE",
+    studentIntake: 49,
+    studentClassId: "22234103127",
   },
   {
     studentName: "Md Jubayer Ahmed",
@@ -213,7 +278,11 @@ const sampleStudents = [
     studentEmail: "jubayer.ahmed24@gmail.com",
     studentContact: "01711334455",
     studentGuardianContact: "01911334455",
-    studentMailingAddress: "House: 22, Road: 4, Sector: 9, Uttara, Dhaka: 1230",
+    studentMailingAddress:
+      "House: 22, Road: 4, Sector: 9, Uttara, Dhaka: 1230",
+    studentDept: "EEE",
+    studentIntake: 52,
+    studentClassId: "22234103128",
   },
   {
     studentName: "Nazia Ferdousi",
@@ -226,6 +295,9 @@ const sampleStudents = [
     studentGuardianContact: "01766778811",
     studentMailingAddress:
       "House: 15, Block: G, Section: 1, Mirpur, Dhaka: 1216",
+    studentDept: "BBA",
+    studentIntake: 50,
+    studentClassId: "22234103129",
   },
 ];
 
