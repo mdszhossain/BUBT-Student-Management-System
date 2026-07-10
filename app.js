@@ -103,6 +103,6 @@ app.patch("/students/:id", async (req, res) => {
   res.redirect("/students");
 });
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${port}`);
 });
