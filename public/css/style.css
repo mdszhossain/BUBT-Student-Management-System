@@ -26,10 +26,15 @@
     margin: auto;
 }
 
-th, td {
+th {
     padding: 10px;
     text-align: center;
     background-color: antiquewhite;
+}
+td {
+    padding: 10px;
+    text-align: center;
+    background-color: #F8FAFC;
 }
 
 .details-btn {
@@ -67,7 +72,7 @@ th, td {
 .filter-student input {
     height: 40px;
     width: 200px;
-    background-color: aliceblue;
+    background-color: #F8FAFC;
     border: 1px solid tomato;
     border-radius: 10px;
     padding-left: 10px;
@@ -87,7 +92,7 @@ th, td {
 .student-details-container {
     width: 80%;
     height: 550px;
-    background-color: antiquewhite;
+    background-color: aliceblue;
     margin: 20px auto;
     border-radius: 20px;
     border: 1px solid tomato;
@@ -100,7 +105,7 @@ th, td {
 }
 .student-info-box {
     height: 350px;
-    background-color: aliceblue;
+    background-color: #F8FAFC;
     border: 1px solid black;
     width: 50%;
     margin: 10px auto;

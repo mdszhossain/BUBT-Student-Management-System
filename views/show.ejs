@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="show-page-btns">
-        <form method="GET" action="/students/edit" class="edit-btn-form">
+        <form method="GET" action="/students/<%= student._id %>/edit" class="edit-btn-form">
             <button class="edit-btn" type="submit">Edit</button>
         </form>
         <form method="POST" action="/students/<%= student._id %>?_method=DELETE" class="delete-btn-form">

@@ -68,14 +68,14 @@ app.get("/students/new", (req, res) => {
   res.render("new.ejs");
 });
 
-app.post("/students", async(req, res) => {
+app.post("/students", async (req, res) => {
   const newStudent = new Student(req.body.newStudent);
   await newStudent.save();
   res.redirect("/students");
 });
 
-app.delete("/students/:id", async(req, res) => {
-  let {id} = req.params;
+app.delete("/students/:id", async (req, res) => {
+  let { id } = req.params;
   await Student.findByIdAndDelete(id);
   res.redirect("/students");
 });
@@ -84,10 +84,23 @@ app.delete("/students/:id", async(req, res) => {
 app.get("/students/:id", async (req, res) => {
   let { id } = req.params;
   let student = await Student.findById(id);
-  console.log(student);
   res.render("show.ejs", { student });
 });
 
+// edit route
+app.get("/students/:id/edit", async (req, res) => {
+  let { id } = req.params;
+  const student = await Student.findById(id);
+  res.render("edit.ejs", { student });
+});
+
+app.patch("/students/:id", async (req, res) => {
+  let { id } = req.params;
+  const newStudent = req.body.newStudent;
+  console.log(newStudent);
+  await Student.updateOne({ _id: id }, newStudent, { new: true });
+  res.redirect("/students");
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

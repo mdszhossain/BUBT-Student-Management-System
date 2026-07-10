@@ -1,0 +1,70 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <div class="new-student-container">
+        <h3 class="new-student-form-heading">Add New Student Information</h3>
+        <div class="new-form-container">
+            <form action="/students/<%= student._id %>?_method=PATCH" method="POST">
+                <div class="name-email">
+                    <div>
+                        <label for="student-name">Name:</label>
+                        <input type="text" name="newStudent[studentName]" id="student-name" value="<%= student.studentName %>">
+                    </div>
+                    <div>
+                        <label for="student-email">Email:</label>
+                        <input type="email" name="newStudent[studentEmail]" id="student-email" value="<%= student.studentEmail %>">
+                    </div>
+                </div>
+                <div class="age-image">
+                    <div>
+                        <label for="student-age">Age:</label>
+                        <input type="number" name="newStudent[studentAge]" id="student-age" value="<%= student.studentAge %>">
+                    </div>
+                    <div>
+                        <label for="student-image">Image URL:</label>
+                        <input type="text" name="newStudent[studentImage]" id="student-image" value="<%= student.studentImage %>">
+                    </div>
+                </div>
+                <div class="academic-info">
+                    <div>
+                        <label for="student-department">Department:</label>
+                        <input type="text" name="newStudent[studentDept]" id="student-department" value="<%= student.studentDept %>">
+                    </div>
+                    <div>
+                        <label for="student-intake">Intake:</label>
+                        <input type="text" name="newStudent[studentIntake]" id="student-intake" value="<%= student.studentIntake %>">
+                    </div>
+                    <div>
+                        <label for="student-classid">Class ID:</label>
+                        <input type="text" name="newStudent[studentClassId]" id="student-classid" value="<%= student.studentClassId %>">
+                    </div>
+                </div>
+                <div class="parental-info">
+                    <div>
+                        <label for="student-fathername">Father's Name:</label>
+                        <input type="text" name="newStudent[studentFatherName]" id="student-fathername" value="<%= student.studentFatherName %>">
+                    </div>
+                    <div>
+                        <label for="student-mothername">Mother's Name:</label>
+                        <input type="text" name="newStudent[studentMotherName]" id="student-mothername" value="<%= student.studentMotherName %>">
+                    </div>
+                    <div>
+                        <label for="student-contact">Student Contact:</label>
+                        <input type="text" name="newStudent[studentContact]" id="student-contact" value="<%= student.studentContact %>">
+                    </div>
+                    <div>
+                        <label for="student-guardian-contact">Student Guardian Contact:</label>
+                        <input type="text" name="newStudent[studentGuardianContact]" id="student-guardian-contact" value="<%= student.studentGuardianContact %>">
+                    </div>
+                </div>
+                <div>
+                    <label for="student-mailing-address">Mailing Address</label>
+                    <textarea name="newStudent[studentMailingAddress]" id="student-mailing-address"><%= student.studentMailingAddress %></textarea>
+                </div>
+                <div class="form-actions">
+                    <a href="/students" class="cancel-btn">Home</a>
+                    <button type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
