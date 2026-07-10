@@ -18,7 +18,6 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 
 // database connection
-// const MONGO_URL = "mongodb://127.0.0.1:27017/bubt";
 main()
   .then(() => {
     console.log("MongoDB Connected");
@@ -45,19 +44,15 @@ app.get("/students", async (req, res) => {
 
   if (studentName && studentName.trim() !== "") {
     query.studentName = { $regex: studentName.trim(), $options: "i" }; // this is for search with any prefixes
-    // query.studentName = studentName;
   }
   if (studentIntake && studentIntake.trim() !== "") {
     query.studentIntake = Number(studentIntake.trim());
-    // query.studentIntake = Number(studentIntake);
   }
   if (studentDept && studentDept.trim() !== "") {
     query.studentDept = { $regex: studentDept.trim(), $options: "i" };
-    // query.studentDept = studentDept;
   }
   if (studentClassId && studentClassId.trim() !== "") {
     query.studentClassId = { $regex: studentClassId.trim(), $options: "i" };
-    // query.studentClassId = studentClassId;
   }
 
   const allStudents = await Student.find(query);
