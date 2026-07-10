@@ -36,6 +36,7 @@
                 <th>Intake</th>
                 <th>Class ID</th>
                 <th>Details</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -48,6 +49,11 @@
                     <td>
                         <form action="/students/<%= student._id %>">
                             <button class="details-btn">Show Details</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="POST" action="/students/<%= student._id %>?_method=DELETE" class="delete-btn-form">
+                            <button class="delete-btn" type="submit">Delete</button>
                         </form>
                     </td>
                 </tr>

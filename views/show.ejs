@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate") -%>
 <body>
     <div class="student-details-container">
-        <img class="student-image" width="150px" src="<%= student.studentImage %>" alt="student_image">
+        <img class="student-image" width="150px" height="150px" src="<%= student.studentImage %>" alt="student_image">
         <div class="student-info-box">
             <div class="student-info-container">
                 <p>Name: <%= student.studentName %></p>
@@ -22,7 +22,7 @@
         <form method="GET" action="/students/edit" class="edit-btn-form">
             <button class="edit-btn" type="submit">Edit</button>
         </form>
-        <form method="GET" action="/students/<%= student._id %>" class="delete-btn-form">
+        <form method="POST" action="/students/<%= student._id %>?_method=DELETE" class="delete-btn-form">
             <button class="delete-btn" type="submit">Delete</button>
         </form>
         <form method="GET" action="/students" class="home-btn-form">

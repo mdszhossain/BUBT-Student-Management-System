@@ -74,6 +74,12 @@ app.post("/students", async(req, res) => {
   res.redirect("/students");
 });
 
+app.delete("/students/:id", async(req, res) => {
+  let {id} = req.params;
+  await Student.findByIdAndDelete(id);
+  res.redirect("/students");
+});
+
 // show route
 app.get("/students/:id", async (req, res) => {
   let { id } = req.params;
