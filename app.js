@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
@@ -5,7 +6,7 @@ const methodOverride = require("method-override");
 const Student = require("./models/listing");
 const ejsMate = require("ejs-mate");
 const app = express();
-const port = 8080;
+const PORT = process.env.PORT || 8080;
 
 // using middlewares
 app.set("view engine", "ejs");
@@ -17,7 +18,7 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 
 // database connection
-const MONGO_URL = "mongodb://127.0.0.1:27017/bubt";
+// const MONGO_URL = "mongodb://127.0.0.1:27017/bubt";
 main()
   .then(() => {
     console.log("MongoDB Connected");
@@ -26,7 +27,7 @@ main()
     console.log("Error Appeared: ", err);
   });
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(process.env.MONGODB_URL);
 }
 
 // root route
