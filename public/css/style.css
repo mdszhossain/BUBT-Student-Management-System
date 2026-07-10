@@ -86,7 +86,7 @@ th, td {
 /* Show Style */
 .student-details-container {
     width: 80%;
-    height: 500px;
+    height: 550px;
     background-color: antiquewhite;
     margin: 20px auto;
     border-radius: 20px;
@@ -99,7 +99,7 @@ th, td {
     margin: 10px auto;
 }
 .student-info-box {
-    height: 300px;
+    height: 350px;
     background-color: aliceblue;
     border: 1px solid black;
     width: 50%;
@@ -141,12 +141,134 @@ th, td {
     gap: 10px;
 }
 
+
 /* new route styling */
 .new-student-container {
-    height: 500px;
-    background-color: antiquewhite;
+    background-color: #fff;
     width: 80%;
-    margin: 20px auto;
-    border-radius: 20px;
-    border: 1px solid tomato;
+    margin: 30px auto;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 30px 40px 40px;
+}
+
+.new-student-form-heading {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.new-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* All field wrappers */
+.new-student-container label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #475569;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.new-student-container input,
+.new-student-container textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-family: "Merriweather", serif;
+    color: #1e293b;
+    background: #f8fafc;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.new-student-container textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.new-student-container input:focus,
+.new-student-container textarea:focus {
+    border-color: royalblue;
+    background: #fff;
+}
+
+/* Name / Email — 2 equal columns */
+.name-email {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+/* Age / Image — 30/70 split */
+.age-image {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 16px;
+}
+
+/* Academic info — 3 equal columns */
+.academic-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* Parental info — 4 equal columns */
+.parental-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.new-student-container form button[type="submit"],
+.new-student-container form button:not([type]),
+.cancel-btn {
+    padding: 11px 30px;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    font-family: "Merriweather", serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancel-btn {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+}
+
+.cancel-btn:hover {
+    background-color: #e2e8f0;
+}
+
+.new-student-container form button[type="submit"]:hover {
+    background-color: #3730a3;
 }

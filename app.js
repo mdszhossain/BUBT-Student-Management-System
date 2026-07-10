@@ -68,6 +68,12 @@ app.get("/students/new", (req, res) => {
   res.render("new.ejs");
 });
 
+app.post("/students", async(req, res) => {
+  const newStudent = new Student(req.body.newStudent);
+  await newStudent.save();
+  res.redirect("/students");
+});
+
 // show route
 app.get("/students/:id", async (req, res) => {
   let { id } = req.params;

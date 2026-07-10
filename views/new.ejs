@@ -2,10 +2,69 @@
 <body>
     <div class="new-student-container">
         <h3 class="new-student-form-heading">Add New Student Information</h3>
-        <form action="">
-            <div>
-                <label for=""></label>
-            </div>
-        </form>
+        <div class="new-form-container">
+            <form action="/students" method="POST">
+                <div class="name-email">
+                    <div>
+                        <label for="student-name">Name:</label>
+                        <input type="text" name="newStudent[studentName]" id="student-name">
+                    </div>
+                    <div>
+                        <label for="student-email">Email:</label>
+                        <input type="email" name="newStudent[studentEmail]" id="student-email">
+                    </div>
+                </div>
+                <div class="age-image">
+                    <div>
+                        <label for="student-age">Age:</label>
+                        <input type="number" name="newStudent[studentAge]" id="student-age">
+                    </div>
+                    <div>
+                        <label for="student-image">Image URL:</label>
+                        <input type="text" name="newStudent[studentImage]" id="student-image">
+                    </div>
+                </div>
+                <div class="academic-info">
+                    <div>
+                        <label for="student-department">Department:</label>
+                        <input type="text" name="newStudent[studentDept]" id="student-department">
+                    </div>
+                    <div>
+                        <label for="student-intake">Intake:</label>
+                        <input type="text" name="newStudent[studentIntake]" id="student-intake">
+                    </div>
+                    <div>
+                        <label for="student-classid">Class ID:</label>
+                        <input type="text" name="newStudent[studentClassId]" id="student-classid">
+                    </div>
+                </div>
+                <div class="parental-info">
+                    <div>
+                        <label for="student-fathername">Father's Name:</label>
+                        <input type="text" name="newStudent[studentFatherName]" id="student-fathername">
+                    </div>
+                    <div>
+                        <label for="student-mothername">Mother's Name:</label>
+                        <input type="text" name="newStudent[studentMotherName]" id="student-mothername">
+                    </div>
+                    <div>
+                        <label for="student-contact">Student Contact:</label>
+                        <input type="text" name="newStudent[studentContact]" id="student-contact">
+                    </div>
+                    <div>
+                        <label for="student-guardian-contact">Student Guardian Contact:</label>
+                        <input type="text" name="newStudent[studentGuardianContact]" id="student-guardian-contact">
+                    </div>
+                </div>
+                <div>
+                    <label for="student-mailing-address">Mailing Address</label>
+                    <textarea name="newStudent[studentMailingAddress]" id="student-mailing-address"></textarea>
+                </div>
+                <div class="form-actions">
+                    <a href="/students" class="cancel-btn">Home</a>
+                    <button type="submit">Add Student</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
