@@ -65,8 +65,17 @@ app.get("/students", async (req, res) => {
 
 // new route
 app.get("/students/new", (req, res) => {
-  res.send("This is new route");
+  res.render("new.ejs");
 });
+
+// show route
+app.get("/students/:id", async (req, res) => {
+  let { id } = req.params;
+  let student = await Student.findById(id);
+  console.log(student);
+  res.render("show.ejs", { student });
+});
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

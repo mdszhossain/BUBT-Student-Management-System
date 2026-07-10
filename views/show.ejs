@@ -1,0 +1,31 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <div class="student-details-container">
+        <img class="student-image" width="150px" src="<%= student.studentImage %>" alt="student_image">
+        <div class="student-info-box">
+            <div class="student-info-container">
+                <p>Name: <%= student.studentName %></p>
+                <p>Age: <%= student.studentAge %></p>
+                <p>Department: <%= student.studentDept %></p>
+                <p>Intake: <%= student.studentIntake %></p>
+                <p>Class ID: <%= student.studentClassId %></p>
+                <p>Father's Name: <%= student.studentFatherName %></p>
+                <p>Mother's Name: <%= student.studentMotherName %></p>
+                <p>Email: <%= student.studentEmail %></p>
+                <p>Contact: <%= student.studentContact %></p>
+                <p>Guardian Contact: <%= student.studentGuardianContact %></p>
+            </div>
+        </div>
+    </div>
+    <div class="show-page-btns">
+        <form method="GET" action="/students/edit" class="edit-btn-form">
+            <button class="edit-btn" type="submit">Edit</button>
+        </form>
+        <form method="GET" action="/students/<%= student._id %>" class="delete-btn-form">
+            <button class="delete-btn" type="submit">Delete</button>
+        </form>
+        <form method="GET" action="/students" class="home-btn-form">
+            <button class="home-btn" type="submit">Home</button>
+        </form>
+    </div>
+</body>

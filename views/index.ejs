@@ -1,7 +1,7 @@
 <% layout('/layouts/boilerplate') -%>
 <body>
     <br>
-    <form method="POST" class="new-students-form" action="/students">
+    <form method="GET" class="new-students-form" action="/students/new">
         <button class="add-student-btn">Add New Student</button>
     </form>
     <br>
@@ -46,7 +46,7 @@
                     <td><%= student.studentIntake %></td>
                     <td><%= student.studentClassId %></td>
                     <td>
-                        <form action="">
+                        <form action="/students/<%= student._id %>">
                             <button class="details-btn">Show Details</button>
                         </form>
                     </td>
