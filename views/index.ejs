@@ -1,8 +1,31 @@
 <% layout('/layouts/boilerplate') -%>
 <body>
     <br>
-    <form class="new-students-form" action="">
+    <form method="POST" class="new-students-form" action="/students">
         <button class="add-student-btn">Add New Student</button>
+    </form>
+    <br>
+    <form class="filter-student" method="GET" action="/students">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="studentName" id="name" value="<%= query.studentName || '' %>">
+        </div>
+        <div>
+            <label for="intake">Intake:</label>
+            <input type="text" name="studentIntake" id="intake" value="<%= query.studentIntake || '' %>">
+        </div>
+        <div>
+            <label for="classId">Id:</label>
+            <input type="text" name="studentClassId" id="classId" value="<%= query.studentClassId || '' %>">
+        </div>
+        <div>
+            <label for="department">Department:</label>
+            <input type="text" name="studentDept" id="department" value="<%= query.studentDept || '' %>">
+        </div>
+        <div>
+            <button type="submit">Search</button>
+            <a href="/students"><button type="button">Clear</button></a>
+        </div>
     </form>
     <br>
     <table class="student-table" border="1">

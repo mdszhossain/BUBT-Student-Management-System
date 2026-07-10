@@ -52,3 +52,30 @@ th, td {
     font-size: 1rem;
     font-weight: 700;
 }
+.add-student-btn:hover {
+    cursor: pointer;
+}
+
+.filter-student {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.filter-student input {
+    height: 40px;
+    width: 300px;
+    background-color: aliceblue;
+    border: 1px solid tomato;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.filter-student button {
+    border: none;
+    background-color: green;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+}
+.filter-student button:hover {
+    cursor: pointer;
+}

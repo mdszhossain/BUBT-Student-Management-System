@@ -35,11 +35,32 @@ app.get("/", (req, res) => {
   res.redirect("/students");
 });
 
-// students route
+// students route — supports search by name, intake, department, and classId
 app.get("/students", async (req, res) => {
-  const allStudents = await Student.find({});
-  // res.send(allStudents);
-  res.render("index.ejs", {allStudents});
+  const { studentName, studentIntake, studentDept, studentClassId } = req.query;
+
+  // Build a query object only with the fields that were provided
+  const query = {};
+
+  if (studentName && studentName.trim() !== "") {
+    query.studentName = { $regex: studentName.trim(), $options: "i" }; // this is for search with any prefixes
+    // query.studentName = studentName;
+  }
+  if (studentIntake && studentIntake.trim() !== "") {
+    query.studentIntake = Number(studentIntake.trim());
+    // query.studentIntake = Number(studentIntake);
+  }
+  if (studentDept && studentDept.trim() !== "") {
+    query.studentDept = { $regex: studentDept.trim(), $options: "i" };
+    // query.studentDept = studentDept;
+  }
+  if (studentClassId && studentClassId.trim() !== "") {
+    query.studentClassId = { $regex: studentClassId.trim(), $options: "i" };
+    // query.studentClassId = studentClassId;
+  }
+
+  const allStudents = await Student.find(query);
+  res.render("index.ejs", { allStudents, query: req.query });
 });
 
 // new route
